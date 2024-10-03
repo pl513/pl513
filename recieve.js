@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 
 app.post('/pl513', (req, res) => {
-    console.log(req.body);
+    console.log(req.body);  // handle the received data
     res.send('Data received');
 });
 
