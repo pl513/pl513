@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="recieve.js"></script>
 </head>
 <body>
-    <p>Hello, World!</p>
+    <script>
+        // Sending POST request using fetch
+        fetch('https://your-server-endpoint.com/pl513', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ key: 'value' }) // Replace with actual data
+        })
+        .then(response => response.json())
+        .then(data => console.log('Success:', data))
+        .catch((error) => console.error('Error:', error));
+    </script>
 </body>
 </html>
